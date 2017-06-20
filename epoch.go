@@ -23,10 +23,14 @@ func (t *Timestamp) FromString(stamp string) error {
 	return nil
 }
 
+func (t* Timestamp) UtcString() string {
+	return t.UTC().String()
+}
+
 func main() {
 	for _, timeAsString := range os.Args[1:] {
 		ts := Timestamp{}
 		ts.FromString(timeAsString)
-		fmt.Println(ts.UTC())
+		fmt.Println(ts.UtcString())
 	}
 }

@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestTimestamp(t *testing.T) {
+func TestWithCorrectTimestamp(t *testing.T) {
 	expected := "2017-06-10 00:00:00 +0000 UTC"
 
 	ts := Timestamp{}
